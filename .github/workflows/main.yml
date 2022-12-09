@@ -1,0 +1,12 @@
+
+name: fe-build
+jobs:
+  run_tests:
+    runs-on: self-hosted
+    steps:
+    - uses: actions/checkout@v2
+    - name: Run script file
+      run: |
+         chmod +x ./ansible/deploy.sh
+         ./ansible/deploy.sh
+      shell: bash
