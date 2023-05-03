@@ -7,7 +7,7 @@ phases:
       - aws --version
       - $(aws ecr get-login --no-include-email --region $AWS_DEFAULT_REGION)
       - echo Building Docker image...
-      - docker build -t my-ecr-repo .
+      - docker build -t nodeapp .
       - docker tag nodeapp:latest $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/nodeapp:latest
       - echo Pushing Docker image to Amazon ECR...
       - docker push $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/nodeapp:latest
