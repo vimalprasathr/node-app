@@ -8,7 +8,7 @@ phases:
       - $(aws ecr get-login --no-include-email --region us-east-1)
       - echo Building Docker image...
       - docker build -t nodeapp .
-      - docker tag nodeapp:latest $714732271094.dkr.ecr.us-east-1.amazonaws.com/nodeapp:latest
+      - docker tag nodeapp:latest 714732271094.dkr.ecr.us-east-1.amazonaws.com/nodeapp:latest
       - echo Pushing Docker image to Amazon ECR...
-      - docker push $714732271094.dkr.ecr.us-east-1.amazonaws.com/nodeapp:latest
+      - docker push 714732271094.dkr.ecr.us-east-1.amazonaws.com/nodeapp:latest
 
