@@ -5,7 +5,7 @@ phases:
     commands:
       - echo Logging in to Amazon ECR...
       - aws --version
-      - $(aws ecr get-login --no-include-email --region us-east-1)
+      - $(aws ecr get-login --no-include-email --region $AWS_DEFAULT_REGION)
       - echo Building Docker image...
       - docker build -t nodeapp .
       - docker tag nodeapp:latest 714732271094.dkr.ecr.us-east-1.amazonaws.com/nodeapp:latest
